@@ -54,7 +54,7 @@ function user_service(db, indexRouter) {
      * Create new user
      * Curl command to test POST
      * curl -d '{"username":"POSTusername", "password": "POSTpassword"}' -H "Content-Type: application/json" -X POST http://localhost:3000/user
-     * curl -d username=POSTusername -d password=POSTpassword -X POST http://localhost:3000/user
+     * curl -d username=POSTusername -d password=POSTpassword -X POST http://localhost:3000/user/signup
      */
     indexRouter.post('/user/signup', function (req, res, next) {
         db.users.create(req.body)
@@ -67,6 +67,7 @@ function user_service(db, indexRouter) {
 
     /**
      * Login through request body
+     * curl -d username=user3 -d password=test3 -X POST http://localhost:3000/user/login
      */
     indexRouter.post('/user/login', function (req, res, next) {
         db.users.findOne({
