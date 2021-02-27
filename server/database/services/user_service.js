@@ -32,7 +32,7 @@ function user_service(db, indexRouter) {
     
     
     /**
-     * Get one user by first and last name
+     * Get one user by username and password
      */
     indexRouter.get('/users/:username/:password', function(req, res, next) {
         const username = req.params.username;           // Assigns username parameter taken from the HTTP request and assigns it to const username

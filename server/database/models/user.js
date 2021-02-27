@@ -12,7 +12,6 @@ module.exports = (Sequelize, sequelize) => {
             password: Sequelize.STRING,     // define column: password
             firstName: Sequelize.STRING,    // define column: firstName
             lastName: Sequelize.STRING,     // define column: lastName
-            age: Sequelize.INTEGER,         // define column: age
             major: Sequelize.STRING         // define column: major
         }
     );
